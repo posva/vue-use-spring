@@ -1,12 +1,12 @@
 {
-  "name": "vue-lib",
+  "name": "vue-motion",
   "version": "0.0.0",
   "description": "Some awesome description",
-  "main": "dist/vue-lib.cjs.js",
-  "unpkg": "dist/vue-lib.global.js",
-  "jsdelivr": "dist/vue-lib.global.js",
-  "module": "dist/vue-lib.esm-bundler.js",
-  "types": "dist/vue-lib.d.ts",
+  "main": "dist/vue-motion.cjs.js",
+  "unpkg": "dist/vue-motion.global.js",
+  "jsdelivr": "dist/vue-motion.global.js",
+  "module": "dist/vue-motion.esm-bundler.js",
+  "types": "dist/vue-motion.d.ts",
   "sideEffects": false,
   "author": {
     "name": "Eduardo San Martin Morote",
@@ -26,7 +26,7 @@
   },
   "files": [
     "dist/*.js",
-    "dist/vue-lib.d.ts",
+    "dist/vue-motion.d.ts",
     "LICENSE",
     "README.md"
   ],
@@ -79,10 +79,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/posva/vue-lib.git"
+    "url": "git+https://github.com/posva/vue-motion.git"
   },
   "bugs": {
-    "url": "https://github.com/posva/vue-lib/issues"
+    "url": "https://github.com/posva/vue-motion/issues"
   },
-  "homepage": "https://github.com/posva/vue-lib#readme"
+  "homepage": "https://github.com/posva/vue-motion#readme"
 }
