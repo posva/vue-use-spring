@@ -1,4 +1,4 @@
-# vue-motion [![Build Status](https://badgen.net/circleci/github/posva/vue-motion/v2)](https://circleci.com/gh/posva/vue-motion) [![npm package](https://badgen.net/npm/v/vue-motion)](https://www.npmjs.com/package/vue-motion) [![coverage](https://badgen.net/codecov/c/github/posva/vue-motion/v2)](https://codecov.io/github/posva/vue-motion) [![thanks](https://badgen.net/badge/thanks/♥/pink)](https://github.com/posva/thanks)
+# vue-use-spring [![Build Status](https://badgen.net/circleci/github/posva/vue-use-spring/v2)](https://circleci.com/gh/posva/vue-use-spring) [![npm package](https://badgen.net/npm/v/vue-use-spring)](https://www.npmjs.com/package/vue-use-spring) [![coverage](https://badgen.net/codecov/c/github/posva/vue-use-spring/v2)](https://codecov.io/github/posva/vue-use-spring) [![thanks](https://badgen.net/badge/thanks/♥/pink)](https://github.com/posva/thanks)
 
 > Some awesome description
 
@@ -19,13 +19,13 @@ degit posva/vue-ts-lib-boilerplate
 #### Rename the project
 
 ```sh
-sed -i '' 's/vue-motion/vue-global-events/g' README.md package.json .github/workflows/release-tag.yml size-checks/*
+sed -i '' 's/vue-use-spring/vue-global-events/g' README.md package.json .github/workflows/release-tag.yml size-checks/*
 ```
 
 #### Circle CI
 
 - Add the project: https://circleci.com/projects/gh/posva
-- Check _Build on forked pull requests_: https://circleci.com/gh/posva/vue-motion/edit#advanced-settings
+- Check _Build on forked pull requests_: https://circleci.com/gh/posva/vue-use-spring/edit#advanced-settings
 - Check _Auto cancel redundant build_ (same place)
 
 ## Dependabot
@@ -44,9 +44,9 @@ Remove the section _Checklist_ before releasing.
 ## Installation
 
 ```sh
-yarn add vue-motion
+yarn add vue-use-spring
 # or
-npm install vue-motion
+npm install vue-use-spring
 ```
 
 ## Usage

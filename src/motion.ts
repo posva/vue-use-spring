@@ -5,7 +5,6 @@ import {
   reactive,
   Ref,
   ref,
-  unref,
   watch,
 } from 'vue'
 import { SpringConfig, noWobble } from './presets'

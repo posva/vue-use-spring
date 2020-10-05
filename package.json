@@ -1,12 +1,12 @@
 {
-  "name": "vue-motion",
+  "name": "vue-use-spring",
   "version": "0.0.0",
   "description": "Some awesome description",
-  "main": "dist/vue-motion.cjs.js",
-  "unpkg": "dist/vue-motion.global.js",
-  "jsdelivr": "dist/vue-motion.global.js",
-  "module": "dist/vue-motion.esm-bundler.js",
-  "types": "dist/vue-motion.d.ts",
+  "main": "dist/vue-use-spring.cjs.js",
+  "unpkg": "dist/vue-use-spring.global.js",
+  "jsdelivr": "dist/vue-use-spring.global.js",
+  "module": "dist/vue-use-spring.esm-bundler.js",
+  "types": "dist/vue-use-spring.d.ts",
   "sideEffects": false,
   "author": {
     "name": "Eduardo San Martin Morote",
@@ -26,7 +26,7 @@
   },
   "files": [
     "dist/*.js",
-    "dist/vue-motion.d.ts",
+    "dist/vue-use-spring.d.ts",
     "LICENSE",
     "README.md"
   ],
@@ -81,10 +81,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/posva/vue-motion.git"
+    "url": "git+https://github.com/posva/vue-use-spring.git"
   },
   "bugs": {
-    "url": "https://github.com/posva/vue-motion/issues"
+    "url": "https://github.com/posva/vue-use-spring/issues"
   },
-  "homepage": "https://github.com/posva/vue-motion#readme"
+  "homepage": "https://github.com/posva/vue-use-spring#readme"
 }

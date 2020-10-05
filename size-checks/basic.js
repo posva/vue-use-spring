@@ -1,1 +1,1 @@
-export * from '../dist/vue-motion.esm-bundler'
+export * from '../dist/vue-use-spring.esm-bundler'
