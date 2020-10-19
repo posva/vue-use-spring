@@ -1074,9 +1074,9 @@
   integrity sha512-nBj5HHoTD+2xg0OQ93p/Hil5SkFUcNJ5BA2RUnHlOH6a4PVskgMK8dOLyVcZ1ZJif7knjt7yQVJ6K6YwIzeR1A==
 
 "@vueuse/core@^4.0.0-beta.16":
-  version "4.0.0-beta.21"
-  resolved "https://registry.yarnpkg.com/@vueuse/core/-/core-4.0.0-beta.21.tgz#c2532b52d976287c19b2d7ef458c5005b2bff2ac"
-  integrity sha512-94YZdfcGqPljz2iAz2ZlBS5AtHjyRMqBlxvOD43zdX+Trq/BDSvO90FfIsomCkWBUFUZWE0U0zx2j7C6jLYaYQ==
+  version "4.0.0-beta.24"
+  resolved "https://registry.yarnpkg.com/@vueuse/core/-/core-4.0.0-beta.24.tgz#92ebff203323f086c217952f9812b9f3a2dbca94"
+  integrity sha512-9dd32aXFzmkeXASxgrJpP5SjZqzVzO9ym0pVSb8rSlZ5BM3ZAlWaPIknfi4qzY75eNBYjO9009aJ6P11SCiDVQ==
   dependencies:
     vue-demi latest
 
