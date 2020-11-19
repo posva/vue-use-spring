@@ -1,7 +1,7 @@
 {
   "name": "vue-use-spring",
   "version": "0.0.1",
-  "description": "Some awesome description",
+  "description": "Natural animations with springs",
   "main": "dist/vue-use-spring.cjs.js",
   "unpkg": "dist/vue-use-spring.global.js",
   "jsdelivr": "dist/vue-use-spring.global.js",
