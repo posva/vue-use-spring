@@ -6,7 +6,7 @@ import {
   Ref,
   ref,
   watch,
-} from 'vue'
+} from 'vue-demi'
 import { SpringConfig, noWobble } from './presets'
 import { raf, cancelRaf, now, isArray, stepper } from './utils'
 
