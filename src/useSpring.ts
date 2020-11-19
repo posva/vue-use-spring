@@ -57,8 +57,7 @@ const noop = () => {}
  * @param options Optional options
  */
 export function useSpring<T extends SpringValue>(
-  initialValue: T | Ref<T>,
-  // TODO: could change
+  initialValue: Refable<T>,
   springConfiguration: Refable<SpringConfig> = noWobble,
   options: {
     onRest?: () => any
