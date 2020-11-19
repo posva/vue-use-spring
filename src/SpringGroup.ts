@@ -20,7 +20,7 @@ import {
   toRaw,
 } from 'vue-demi'
 import { SpringConfig } from './presets'
-import { useSpring } from './motion'
+import { useSpring } from './useSpring'
 
 interface Position {
   top: number

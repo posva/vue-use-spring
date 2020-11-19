@@ -1,3 +1,3 @@
 export * from './presets'
-export { useSpring } from './motion'
+export { useSpring } from './useSpring'
 export { SpringGroup } from './SpringGroup'
