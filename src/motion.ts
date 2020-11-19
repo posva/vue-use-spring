@@ -6,9 +6,10 @@ import {
   Ref,
   ref,
   watch,
+  unref,
 } from 'vue-demi'
 import { SpringConfig, noWobble } from './presets'
-import { raf, cancelRaf, now, isArray, stepper } from './utils'
+import { raf, cancelRaf, now, isArray, stepper, Refable } from './utils'
 
 const msPerFrame = 1000 / 60
 
@@ -40,7 +41,7 @@ const noop = () => {}
 export function useSpring<T extends SpringValue>(
   initialValue: T | Ref<T>,
   // TODO: could change
-  springConfiguration?: SpringConfig,
+  springConfiguration: Refable<SpringConfig> = noWobble,
   options: {
     onRest?: () => any
   } = {}
@@ -150,7 +151,7 @@ export function useSpring<T extends SpringValue>(
       animateValues(
         framesToCatchUp,
         currentFrameCompletion,
-        spring,
+        unref(spring),
         realValues.value,
         currentValues.value,
         currentVelocities.value,

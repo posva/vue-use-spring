@@ -4,9 +4,18 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, onUnmounted, ref, unref, watch } from 'vue'
+import {
+  computed,
+  defineComponent,
+  onUnmounted,
+  PropType,
+  ref,
+  toRef,
+  unref,
+  watch,
+} from 'vue'
 import { useMouse } from '@vueuse/core'
-import { presets, useSpring } from '../../../src'
+import { presets, SpringConfig, useSpring } from '../../../src'
 
 function generateRandomPosition(offset = 100) {
   return {
@@ -18,6 +27,10 @@ function generateRandomPosition(offset = 100) {
 export default defineComponent({
   props: {
     paused: Boolean,
+    spring: {
+      type: Object as PropType<SpringConfig>,
+      default: () => presets.stiff,
+    },
   },
 
   setup(props) {
@@ -29,7 +42,7 @@ export default defineComponent({
       dotAnimated.y = y
     })
 
-    const dotAnimated = useSpring(dot)
+    const dotAnimated = useSpring(dot, toRef(props, 'spring'))
 
     dot.value = generateRandomPosition()
 
