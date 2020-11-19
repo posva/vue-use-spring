@@ -1,26 +1,11 @@
 <template>
-  <main class="main">
-    <label> <input type="checkbox" v-model="paused" /> Paused </label>
-    <!-- <MovingDot v-for="i in 3" :key="i" :paused="paused"></MovingDot> -->
-    <CardDemo :paused="paused" />
-  </main>
+  <div class="main">
+    <nav>
+      <router-link to="/">Home</router-link>
+    </nav>
+    <router-view></router-view>
+  </div>
 </template>
-
-<script lang="ts">
-import { defineComponent, ref } from 'vue'
-import MovingDot from './MovingDot.vue'
-import CardDemo from './views/CardDemo.vue'
-
-export default defineComponent({
-  components: { MovingDot, CardDemo },
-
-  setup() {
-    let paused = ref(true)
-
-    return { paused }
-  },
-})
-</script>
 
 <style>
 html {
@@ -49,5 +34,6 @@ body,
 .main {
   width: 100%;
   height: 100%;
+  margin: auto;
 }
 </style>
