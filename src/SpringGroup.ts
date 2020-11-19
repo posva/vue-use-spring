@@ -11,18 +11,14 @@ import {
   Fragment,
   VNode,
   warn,
-  resolveTransitionHooks,
-  useTransitionState,
   getTransitionRawChildren,
-  getCurrentInstance,
-  setTransitionHooks,
   createVNode,
   onUpdated,
   PropType,
   defineComponent,
   watch,
-} from '@vue/runtime-core'
-import { reactive, toRaw, toRefs } from '@vue/reactivity'
+  toRaw,
+} from 'vue-demi'
 import { SpringConfig } from './presets'
 import { useSpring } from './motion'
 
@@ -48,8 +44,8 @@ const TransitionGroupImpl = defineComponent({
   },
 
   setup(props, { slots }) {
-    const instance = getCurrentInstance()!
-    const state = useTransitionState()
+    // const instance = getCurrentInstance()!
+    // const state = useTransitionState()
     // TODO: const positions = useSprings(childrenKeys, {x: 0, y:0})
     const pos1 = useSpring({ x: 0, y: 0 })
     const pos2 = useSpring({ x: 0, y: 0 })
@@ -206,15 +202,15 @@ export const SpringGroup = (TransitionGroupImpl as unknown) as {
   }
 }
 
-function callPendingCbs(c: VNode) {
-  const el = c.el as any
-  if (el._moveCb) {
-    el._moveCb()
-  }
-  if (el._enterCb) {
-    el._enterCb()
-  }
-}
+// function callPendingCbs(c: VNode) {
+//   const el = c.el as any
+//   if (el._moveCb) {
+//     el._moveCb()
+//   }
+//   if (el._enterCb) {
+//     el._enterCb()
+//   }
+// }
 
 function recordPosition(c: VNode) {
   newPositionMap.set(c, (c.el as Element).getBoundingClientRect())
