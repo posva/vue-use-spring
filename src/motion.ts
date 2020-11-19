@@ -179,6 +179,25 @@ export function useSpring<T extends SpringValue>(
     })
   }
 
+  // @ts-ignore
+  modifiableValues.reset = (v: T) => {
+    // console.log('setting', v)
+    // for (const key in v) {
+    //   // @ts-ignore
+    //   currentValues.value[key] = v[key]
+    //   // @ts-ignore
+    //   realValues.value[key] = v[key]
+    // }
+    Object.assign(currentValues.value, v)
+    Object.assign(realValues.value, v)
+    wasAnimating = false
+    animationId = null
+    // for (const key in currentVelocities.value) {
+    // @ts-ignore: reset speed
+    // currentVelocities.value[key] = 0
+    // }
+  }
+
   return reactive(modifiableValues) as T
 }
 
