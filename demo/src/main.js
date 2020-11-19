@@ -5,6 +5,7 @@ import Home from './views/Home.vue'
 import CardHoverDemo from './views/CardHoverDemo.vue'
 import MovingDotDemo from './views/MovingDotDemo.vue'
 import ListDemo from './views/ListDemo.vue'
+import UseSpring from './views/UseSpring.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -13,6 +14,7 @@ const router = createRouter({
     { path: '/card-hover', component: CardHoverDemo },
     { path: '/moving-dot', component: MovingDotDemo },
     { path: '/list', component: ListDemo },
+    { path: '/use-spring', component: UseSpring },
   ],
 })
 
