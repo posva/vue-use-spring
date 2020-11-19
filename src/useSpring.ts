@@ -38,6 +38,24 @@ export interface SpringObject<T extends SpringValue> {
 
 const noop = () => {}
 
+/**
+ * Returns an object with the same shape as initialValue but that interpolates
+ * its value when set instead of directly changing.
+ *
+ * @example
+ * ```js
+ *   const position = useSpring({ x: 0, y: 100 })
+ *   position.x = 100
+ *   position.x // 0
+ *   await delay(300) // wait some time
+ *   // the position.x automatically increases until it reaches 100
+ *   position.x // 70
+ * ```
+ *
+ * @param initialValue initial value of the spring controlled variable
+ * @param springConfiguration Spring properties. Can be a Ref or Computed
+ * @param options Optional options
+ */
 export function useSpring<T extends SpringValue>(
   initialValue: T | Ref<T>,
   // TODO: could change
