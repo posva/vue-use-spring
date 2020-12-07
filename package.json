@@ -42,7 +42,7 @@
     "@types/jest": "^26.0.8",
     "@types/jsdom": "^16.2.3",
     "@types/lodash-es": "^4.17.3",
-    "@vue/test-utils": "^2.0.0-beta.11",
+    "@vue/test-utils": "^2.0.0-beta.12",
     "@vueuse/core": "^4.0.0-beta.16",
     "codecov": "^3.7.2",
     "conventional-changelog-cli": "^2.0.34",
