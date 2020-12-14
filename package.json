@@ -41,7 +41,7 @@
     "@size-limit/preset-small-lib": "^4.6.0",
     "@types/jest": "^26.0.16",
     "@types/jsdom": "^16.2.3",
-    "@types/lodash-es": "^4.17.3",
+    "@types/lodash-es": "^4.17.4",
     "@vue/test-utils": "^2.0.0-beta.12",
     "@vueuse/core": "^4.0.0-beta.16",
     "codecov": "^3.7.2",
