@@ -42,7 +42,7 @@
     "@types/jest": "^26.0.20",
     "@types/jsdom": "^16.2.6",
     "@types/lodash-es": "^4.17.4",
-    "@vitejs/plugin-vue": "^1.1.2",
+    "@vitejs/plugin-vue": "^1.1.4",
     "@vue/compiler-sfc": "^3.0.5",
     "@vue/test-utils": "^2.0.0-rc.0",
     "@vueuse/core": "^4.0.10",
