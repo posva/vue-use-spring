@@ -49,7 +49,7 @@
     "codecov": "^3.7.2",
     "conventional-changelog-cli": "^2.0.34",
     "jest": "^26.2.2",
-    "lint-staged": "^10.5.3",
+    "lint-staged": "^10.5.4",
     "lodash-es": "^4.17.20",
     "pascalcase": "^1.0.0",
     "prettier": "^2.2.1",
