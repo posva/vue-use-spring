@@ -924,18 +924,18 @@
   resolved "https://registry.yarnpkg.com/@vue/test-utils/-/test-utils-2.0.0-rc.1.tgz#cc462997b50dc07d73dee151da0cbb1c39a40a5a"
   integrity sha512-WWzSbHtszmSyC1KQ3Ak6lSs9FVcdyMekZFe/g0Fdcpi3TNxUj5mEfj98sn4/ySiC4gDh53bXgveqxXKK4RspDg==
 
-"@vueuse/core@^4.1.1":
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/@vueuse/core/-/core-4.1.1.tgz#9136952bc435dfc42263959bea8dac35965bac43"
-  integrity sha512-a+fu7FUHDzLpgcOGwbgyNZXLbm85NHEf4jkPkyqTtqHEHqU4aVbdyM0Vzl90PpFEDe92pJjoYJnZEQQgq9nEHw==
+"@vueuse/core@^4.2.1":
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/@vueuse/core/-/core-4.2.1.tgz#ac72801c67f26315723d4d244e843c28047f7bc4"
+  integrity sha512-V8KohPwbIN9t5ZWfqB+TJhzM2iwrugq78t6I1QwoGdaw9fdbQfHJiiaf83MGxgYO2B9IwVtuYc4Vjd9X/0Kppg==
   dependencies:
-    "@vueuse/shared" "4.1.1"
+    "@vueuse/shared" "4.2.1"
     vue-demi latest
 
-"@vueuse/shared@4.1.1":
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/@vueuse/shared/-/shared-4.1.1.tgz#58e4333d5ab45927e25578fad83bc81cecfea475"
-  integrity sha512-M1bNwOaJZypu/AUYKrOU87pQLRp8VgMYHQyL1hVc6V3hi3ZcUBSjZuyFVaUdxGk0OeA0NPzHoYbByTMrpxElug==
+"@vueuse/shared@4.2.1":
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/@vueuse/shared/-/shared-4.2.1.tgz#67e3229e7df68e2c4225d0086537e3a972fe89eb"
+  integrity sha512-lSrzRHRzdqf4LTczeTrVmRd4cmJ6D1u77fJ2E9gksfKHZs+zwSZku7EiAqVj/g1nqZglTu5Z4y6aE6dp3YLYWw==
   dependencies:
     vue-demi latest
 
