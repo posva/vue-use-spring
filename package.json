@@ -43,7 +43,7 @@
     "@types/jsdom": "^16.2.6",
     "@types/lodash-es": "^4.17.4",
     "@vitejs/plugin-vue": "^1.1.4",
-    "@vue/compiler-sfc": "^3.0.5",
+    "@vue/compiler-sfc": "^3.0.6",
     "@vue/test-utils": "^2.0.0-rc.1",
     "@vueuse/core": "^4.2.1",
     "codecov": "^3.7.2",
@@ -60,7 +60,7 @@
     "ts-jest": "^26.5.1",
     "typescript": "^4.1.5",
     "vite": "^2.0.1",
-    "vue": "^3.0.5",
+    "vue": "^3.0.6",
     "vue-router": "^4.0.4",
     "yorkie": "^2.0.0"
   },
