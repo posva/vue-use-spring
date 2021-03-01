@@ -1,6 +1,15 @@
-- match:
-    dependency_type: development
-    update_type: all
-- match:
-    dependency_type: production
-    update_type: security:major
+name: auto-merge
+
+on:
+  pull_request:
+
+jobs:
+  auto-merge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ahmadnassri/action-dependabot-auto-merge@v2
+        with:
+          target: minor
+          command: squash and merge
+          github-token: ${{ secrets.GH_TOKEN }}
