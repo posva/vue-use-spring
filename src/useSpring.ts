@@ -51,9 +51,9 @@ const noop = () => {}
  *   position.x // 70
  * ```
  *
- * @param initialValue initial value of the spring controlled variable
- * @param springConfiguration Spring properties. Can be a Ref or Computed
- * @param options Optional options
+ * @param initialValue - initial value of the spring controlled variable
+ * @param springConfiguration - Spring properties. Can be a Ref or Computed
+ * @param options - Optional options
  */
 export function useSpring<T extends SpringValue>(
   initialValue: Refable<T>,
