@@ -33,7 +33,7 @@
   "keywords": [],
   "license": "MIT",
   "devDependencies": {
-    "@microsoft/api-extractor": "7.13.1",
+    "@microsoft/api-extractor": "7.13.2",
     "@rollup/plugin-alias": "^3.1.2",
     "@rollup/plugin-commonjs": "^17.1.0",
     "@rollup/plugin-node-resolve": "^11.2.0",
@@ -93,6 +93,6 @@
   },
   "homepage": "https://github.com/posva/vue-use-spring#readme",
   "dependencies": {
-    "vue-demi": "^0.6.0"
+    "vue-demi": "^0.7.1"
   }
 }
