@@ -938,9 +938,9 @@
   integrity sha512-dn5FyfSc4ky424jH4FntiHno7Ss5yLkqKNmM/NXwANRnlkmqu74pnGetexDFVG5phMk9/FhwovUZCWGxsotVKg==
 
 "@vue/test-utils@^2.0.0-rc.1":
-  version "2.0.0-rc.3"
-  resolved "https://registry.yarnpkg.com/@vue/test-utils/-/test-utils-2.0.0-rc.3.tgz#11b97d56d786bec60431b00888b3264e334b83c8"
-  integrity sha512-f2/RtXp0IZgyAL/X3N9dBlobcL3VMZ336nw/gKBIQWXPMC9dbZvC7C4F7bQNI5235fjAEO6zeMK2L7MwsHlKBw==
+  version "2.0.0-rc.9"
+  resolved "https://registry.yarnpkg.com/@vue/test-utils/-/test-utils-2.0.0-rc.9.tgz#b3f817d710a1d0ae2084143520c9d8d3c552bfa6"
+  integrity sha512-iJNAAfXTTSd2/5vUZpFbUwUwC8w3hbFu8s9ptKkZGsiw6pO6mFsaLs2rzI3Ea/8hwqcF3K7Wp2diKOdzqmb6qg==
 
 "@vueuse/core@^4.3.1":
   version "4.3.1"
