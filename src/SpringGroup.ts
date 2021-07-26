@@ -196,7 +196,7 @@ const TransitionGroupImpl = defineComponent({
   },
 })
 
-export const SpringGroup = (TransitionGroupImpl as unknown) as {
+export const SpringGroup = TransitionGroupImpl as unknown as {
   new (): {
     $props: SpringGroupProps
   }
