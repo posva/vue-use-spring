@@ -33,7 +33,7 @@
   "keywords": [],
   "license": "MIT",
   "devDependencies": {
-    "@microsoft/api-extractor": "7.28.6",
+    "@microsoft/api-extractor": "7.28.7",
     "@rollup/plugin-alias": "^3.1.9",
     "@rollup/plugin-commonjs": "^21.1.0",
     "@rollup/plugin-node-resolve": "^13.3.0",
@@ -53,7 +53,7 @@
     "lodash-es": "^4.17.21",
     "pascalcase": "^1.0.0",
     "prettier": "^2.7.1",
-    "rollup": "^2.77.0",
+    "rollup": "^2.77.2",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.32.1",
     "size-limit": "^5.0.5",
@@ -61,7 +61,7 @@
     "typescript": "^4.7.4",
     "vite": "^2.9.14",
     "vue": "^3.2.37",
-    "vue-router": "^4.1.2",
+    "vue-router": "^4.1.3",
     "yorkie": "^2.0.0"
   },
   "gitHooks": {
@@ -99,6 +99,6 @@
   },
   "homepage": "https://github.com/posva/vue-use-spring#readme",
   "dependencies": {
-    "vue-demi": "^0.13.5"
+    "vue-demi": "^0.13.6"
   }
 }
