@@ -33,7 +33,7 @@
   "keywords": [],
   "license": "MIT",
   "devDependencies": {
-    "@microsoft/api-extractor": "7.29.3",
+    "@microsoft/api-extractor": "7.33.2",
     "@rollup/plugin-alias": "^3.1.9",
     "@rollup/plugin-commonjs": "^21.1.0",
     "@rollup/plugin-node-resolve": "^13.3.0",
@@ -43,8 +43,8 @@
     "@types/jsdom": "^16.2.15",
     "@types/lodash-es": "^4.17.6",
     "@vitejs/plugin-vue": "^2.3.4",
-    "@vue/compiler-sfc": "^3.2.37",
-    "@vue/test-utils": "^2.0.2",
+    "@vue/compiler-sfc": "^3.2.41",
+    "@vue/test-utils": "^2.1.0",
     "@vueuse/core": "^8.9.4",
     "codecov": "^3.8.3",
     "conventional-changelog-cli": "^2.2.2",
@@ -53,15 +53,15 @@
     "lodash-es": "^4.17.21",
     "pascalcase": "^1.0.0",
     "prettier": "^2.7.1",
-    "rollup": "^2.78.1",
+    "rollup": "^2.79.1",
     "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-typescript2": "^0.33.0",
+    "rollup-plugin-typescript2": "^0.34.1",
     "size-limit": "^5.0.5",
     "ts-jest": "^27.1.5",
-    "typescript": "^4.7.4",
+    "typescript": "^4.8.4",
     "vite": "^2.9.15",
-    "vue": "^3.2.37",
-    "vue-router": "^4.1.3",
+    "vue": "^3.2.41",
+    "vue-router": "^4.1.5",
     "yorkie": "^2.0.0"
   },
   "gitHooks": {
@@ -99,6 +99,6 @@
   },
   "homepage": "https://github.com/posva/vue-use-spring#readme",
   "dependencies": {
-    "vue-demi": "^0.13.8"
+    "vue-demi": "^0.13.11"
   }
 }
