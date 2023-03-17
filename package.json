@@ -45,7 +45,7 @@
     "@vitejs/plugin-vue": "^2.3.4",
     "@vue/compiler-sfc": "^3.2.41",
     "@vue/test-utils": "^2.1.0",
-    "@vueuse/core": "^8.9.4",
+    "@vueuse/core": "^9.13.0",
     "codecov": "^3.8.3",
     "conventional-changelog-cli": "^2.2.2",
     "jest": "^27.5.1",
