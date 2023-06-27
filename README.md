@@ -1,4 +1,4 @@
-# vue-use-spring [![Build Status](https://badgen.net/circleci/github/posva/vue-use-spring/v2)](https://circleci.com/gh/posva/vue-use-spring) [![npm package](https://badgen.net/npm/v/vue-use-spring)](https://www.npmjs.com/package/vue-use-spring) [![coverage](https://badgen.net/codecov/c/github/posva/vue-use-spring/v2)](https://codecov.io/github/posva/vue-use-spring) [![thanks](https://badgen.net/badge/thanks/♥/pink)](https://github.com/posva/thanks)
+# vue-use-spring [![NPM version](https://img.shields.io/npm/v/vue-use-spring?color=black&label=)](https://www.npmjs.com/package/vue-use-spring) [![ci status](https://github.com/posva/vue-use-spring/actions/workflows/ci.yml/badge.svg)](https://github.com/posva/vue-use-spring/actions/workflows/ci.yml)
 
 > 💫 Make natural animations with springs!
 
@@ -21,7 +21,7 @@ const position = useSpring({ x: 0, y: 0 })
 position.x = 100
 ```
 
-```html
+```vue
 <p :style="{ transform: `translateX(${position.x}px)` }">I move!</p>
 ```
 
