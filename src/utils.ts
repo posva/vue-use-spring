@@ -1,4 +1,3 @@
-import { Ref } from 'vue-demi'
 import { SpringConfig } from './presets'
 
 export const isClient = typeof window !== 'undefined'

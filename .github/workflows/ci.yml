@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - v1
+
+  pull_request:
+    branches:
+      - v1
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+      - name: Set node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'pnpm'
+
+      - name: Setup
+        run: npm i -g @antfu/ni
+
+      - name: Install
+        run: nci
+
+      - name: Lint
+        run: nr lint
+
+      - name: Build
+        run: nr build
+
+      - name: Types
+        run: nr test:types
+
+      - name: Bundle Types
+        run: nr build:dts
+
+      # Not implemented yet
+      # - name: Test
+      #   run: nr test:unit
+
+      - uses: codecov/codecov-action@v2
