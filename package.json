@@ -48,7 +48,7 @@
     "@rollup/plugin-replace": "^3.1.0",
     "@size-limit/preset-small-lib": "^7.0.8",
     "@types/jest": "^27.5.2",
-    "@types/jsdom": "^16.2.15",
+    "@types/jsdom": "^21.1.1",
     "@types/lodash-es": "^4.17.7",
     "@vitejs/plugin-vue": "^4.2.3",
     "@vue/compiler-sfc": "^3.3.4",
