@@ -3,8 +3,6 @@ import { SpringConfig } from './presets'
 
 export const isClient = typeof window !== 'undefined'
 
-export type Refable<T> = Ref<T> | T
-
 export const raf = isClient
   ? window.requestAnimationFrame.bind(window)
   : () => {}

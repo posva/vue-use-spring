@@ -5,10 +5,14 @@ import {
   reactive,
   ref,
   watch,
-  unref,
+  MaybeRefOrGetter,
+  toValue,
+  Ref,
+  isRef,
+  UnwrapRef,
 } from 'vue-demi'
 import { SpringConfig, noWobble } from './presets'
-import { raf, cancelRaf, now, isArray, stepper, Refable } from './utils'
+import { raf, cancelRaf, now, isArray, stepper } from './utils'
 
 const msPerFrame = 1000 / 60
 
@@ -55,19 +59,21 @@ const noop = () => {}
  * @param springConfiguration - Spring properties. Can be a Ref or Computed
  * @param options - Optional options
  */
-export function useSpring<T extends SpringValue>(
-  initialValue: Refable<T>,
-  springConfiguration: Refable<SpringConfig> = noWobble,
+export function useSpring<T extends MaybeRefOrGetter<SpringValue>>(
+  initialValue: T,
+  springConfiguration: MaybeRefOrGetter<SpringConfig> = noWobble,
   options: {
     onRest?: () => any
   } = {}
-): T {
+): UnwrapRef<T> {
   const spring = springConfiguration || noWobble
 
   const onRest = options.onRest || noop
 
   // hold a ref to real values so we can change them
-  const realValues = ref(initialValue)
+  const realValues = ref(
+    isRef(initialValue) ? initialValue : toValue(initialValue)
+  ) as Ref<SpringValue>
 
   let wasAnimating = false
   let prevTime = 0
@@ -167,8 +173,8 @@ export function useSpring<T extends SpringValue>(
       animateValues(
         framesToCatchUp,
         currentFrameCompletion,
-        unref(spring),
-        realValues.value,
+        toValue(spring),
+        toValue(realValues),
         currentValues.value,
         currentVelocities.value,
         idealValues,
@@ -185,7 +191,9 @@ export function useSpring<T extends SpringValue>(
     })
   }
 
-  const modifiableValues = (isArray(realValues.value) ? [] : {}) as T
+  const modifiableValues = (
+    isArray(realValues.value) ? [] : {}
+  ) as NumericalValues
   for (const key in realValues.value) {
     // @ts-ignore
     modifiableValues[key] = computed({
@@ -215,7 +223,7 @@ export function useSpring<T extends SpringValue>(
     // }
   }
 
-  return reactive(modifiableValues) as T
+  return reactive(modifiableValues) as UnwrapRef<T>
 }
 
 function shouldStopAnimation(
