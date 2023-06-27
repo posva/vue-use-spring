@@ -1,104 +1,91 @@
-<template>
-  <div class="root">
-    <div
-      class="card"
-      :style="cardStyle"
-      @click="spin"
-      @mousemove="update"
-      @mouseleave="reset"
-    >
-      <!-- <pre>{{ transform }}</pre> -->
-    </div>
-  </div>
-</template>
-
-<script lang="ts">
-import { computed, defineComponent } from 'vue'
+<script setup lang="ts">
+import { computed, defineComponent, ref } from 'vue'
 import { useSpring } from '../../../src'
 
 type HSLColor = [number, number, number]
 
-export default defineComponent({
-  props: {
-    paused: Boolean,
-  },
-  setup(props) {
-    const springConfig = {
-      mass: 5,
-      tension: 350,
-      friction: 40,
-    }
+defineProps<{
+  paused: boolean
+}>()
 
-    const transform = useSpring(
-      { x: 0, y: 0, z: 0, scale: 1, color: 0 },
-      springConfig,
-      {
-        onRest() {
-          transform.z = 0
-        },
-      }
-    )
+const springConfig = {
+  mass: 5,
+  tension: 350,
+  friction: 40,
+}
 
-    function update({ clientX: x, clientY: y }: MouseEvent) {
-      transform.x = -(y - window.innerHeight / 2) / 20
-      transform.y = (x - window.innerWidth / 2) / 20
-      transform.scale = 1.1
-      transform.color = 1
-    }
+const transform = useSpring(
+  ref({ x: 0, y: 0, z: 0, scale: 1, color: 0 }),
+  springConfig,
+  {
+    onRest() {
+      transform.z = 0
+    },
+  }
+)
 
-    function spin() {
-      transform.z = (Math.round(Math.random() * 2) + 1) * 180
-    }
+function update({ clientX: x, clientY: y }: MouseEvent) {
+  transform.x = -(y - window.innerHeight / 2) / 20
+  transform.y = (x - window.innerWidth / 2) / 20
+  transform.scale = 1.1
+  transform.color = 1
+}
 
-    function reset() {
-      transform.x = 0
-      transform.y = 0
-      transform.scale = 1
-      transform.color = 0
-    }
+function spin() {
+  transform.z = (Math.round(Math.random() * 2) + 1) * 180
+}
 
-    // hsl(18deg 83% 65%)
-    // hsl(295deg 44% 31%)
+function reset() {
+  transform.x = 0
+  transform.y = 0
+  transform.scale = 1
+  transform.color = 0
+}
 
-    function interpolateRGB(from: number, to: number, amount: number) {
-      return `rgb(${interpolate(
-        (from >> 16) & 255,
-        (to >> 16) & 255,
-        amount
-      )},${interpolate(
-        (from >> 8) & 255,
-        (to >> 8) & 255,
-        amount
-      )},${interpolate(from & 255, to & 255, amount)})`
-    }
+// hsl(18deg 83% 65%)
+// hsl(295deg 44% 31%)
 
-    // hsl(18deg 83% 65%)
-    // hsl(295deg 44% 31%)
-    // const fromColor = [18, 83, 65] as HSLColor
-    // const toColor = [295, 44, 31] as HSLColor
+function interpolateRGB(from: number, to: number, amount: number) {
+  return `rgb(${interpolate(
+    (from >> 16) & 255,
+    (to >> 16) & 255,
+    amount
+  )},${interpolate((from >> 8) & 255, (to >> 8) & 255, amount)},${interpolate(
+    from & 255,
+    to & 255,
+    amount
+  )})`
+}
 
-    // function interpolateHSL(from: HSLColor, to: HSLColor, amount: number) {
-    //   return `hsl(${interpolate(from[0], to[0], amount)}deg,${interpolate(
-    //     from[1],
-    //     to[1],
-    //     amount
-    //   )}%,${interpolate(from[2], to[2], amount)}%)`
-    // }
+// hsl(18deg 83% 65%)
+// hsl(295deg 44% 31%)
+// const fromColor = [18, 83, 65] as HSLColor
+// const toColor = [295, 44, 31] as HSLColor
 
-    function interpolate(from: number, to: number, amount: number) {
-      return amount * (to - from) + from
-    }
+// function interpolateHSL(from: HSLColor, to: HSLColor, amount: number) {
+//   return `hsl(${interpolate(from[0], to[0], amount)}deg,${interpolate(
+//     from[1],
+//     to[1],
+//     amount
+//   )}%,${interpolate(from[2], to[2], amount)}%)`
+// }
 
-    const cardStyle = computed(() => ({
-      transform: `perspective(600px) rotateX(${transform.x}deg) rotateZ(${transform.y}deg) rotateY(${transform.z}deg) scale(${transform.scale})`,
-      borderColor: interpolateRGB(0xffffff, 0xffd5cd, transform.color),
-      // backgroundColor: interpolateHSL(fromColor, toColor, transform.color),
-    }))
+function interpolate(from: number, to: number, amount: number) {
+  return amount * (to - from) + from
+}
 
-    return { cardStyle, update, reset, spin, transform }
-  },
+const borderColor = computed(() => {
+  return interpolateRGB(0xffffff, 0, transform.color)
 })
 </script>
+
+<template>
+  <div class="root">
+    <div class="card" @click="spin" @mousemove="update" @mouseleave="reset">
+      <!-- <pre>{{ transform }}</pre> -->
+    </div>
+  </div>
+</template>
 
 <style scoped>
 .root {
@@ -123,6 +110,10 @@ export default defineComponent({
   will-change: transform;
   border: 15px solid white;
   /* backface-visibility: hidden; */
+  transform: perspective(1000px) rotateX(v-bind('transform.x + "deg"'))
+    rotateZ(v-bind('transform.y + "deg"'))
+    rotateY(v-bind('transform.z + "deg"')) scale(v-bind('transform.scale'));
+  border-color: v-bind('borderColor');
 }
 
 .card:hover {
