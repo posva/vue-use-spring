@@ -10,7 +10,7 @@ dependencies:
     version: 1.4.0(vue@3.3.4)
   vue-demi:
     specifier: latest
-    version: 0.14.5(vue@3.3.4)
+    version: 0.14.5(@vue/composition-api@1.4.0)(vue@3.3.4)
 
 devDependencies:
   '@types/jsdom':
@@ -33,7 +33,7 @@ devDependencies:
     version: 2.4.0(vue@3.3.4)
   '@vueuse/core':
     specifier: ^10.2.0
-    version: 10.2.0(vue@3.3.4)
+    version: 10.2.0(@vue/composition-api@1.4.0)(vue@3.3.4)
   conventional-changelog-cli:
     specifier: ^2.2.2
     version: 2.2.2
@@ -807,7 +807,6 @@ packages:
     dependencies:
       tslib: 2.6.0
       vue: 3.3.4
-    dev: false
 
   /@vue/devtools-api@6.5.0:
     resolution: {integrity: sha512-o9KfBeaBmCKl10usN4crU53fYtC1r7jJwdGKjPT24t348rHxgfpZ0xL3Xm/gLUYnc0oTp8LAmrxOeLyu6tbk2Q==}
@@ -869,14 +868,15 @@ packages:
       vue-component-type-helpers: 1.6.5
     dev: true
 
-  /@vueuse/core@10.2.0(vue@3.3.4):
+  /@vueuse/core@10.2.0(@vue/composition-api@1.4.0)(vue@3.3.4):
     resolution: {integrity: sha512-aHBnoCteIS3hFu7ZZkVB93SanVDY6t4TIb7XDLxJT/HQdAZz+2RdIEJ8rj5LUoEJr7Damb5+sJmtpCwGez5ozQ==}
     dependencies:
       '@types/web-bluetooth': 0.0.17
       '@vueuse/metadata': 10.2.0
-      '@vueuse/shared': 10.2.0(vue@3.3.4)
-      vue-demi: 0.14.5(vue@3.3.4)
+      '@vueuse/shared': 10.2.0(@vue/composition-api@1.4.0)(vue@3.3.4)
+      vue-demi: 0.14.5(@vue/composition-api@1.4.0)(vue@3.3.4)
     transitivePeerDependencies:
+      - '@vue/composition-api'
       - vue
     dev: true
 
@@ -884,11 +884,12 @@ packages:
     resolution: {integrity: sha512-IR7Mkq6QSgZ38q/2ZzOt+Zz1OpcEsnwE64WBumDQ+RGKrosFCtUA2zgRrOqDEzPBXrVB+4HhFkwDjQMu0fDBKw==}
     dev: true
 
-  /@vueuse/shared@10.2.0(vue@3.3.4):
+  /@vueuse/shared@10.2.0(@vue/composition-api@1.4.0)(vue@3.3.4):
     resolution: {integrity: sha512-dIeA8+g9Av3H5iF4NXR/sft4V6vys76CpZ6hxwj8eMXybXk2WRl3scSsOVi+kQ9SX38COR7AH7WwY83UcuxbSg==}
     dependencies:
-      vue-demi: 0.14.5(vue@3.3.4)
+      vue-demi: 0.14.5(@vue/composition-api@1.4.0)(vue@3.3.4)
     transitivePeerDependencies:
+      - '@vue/composition-api'
       - vue
     dev: true
 
@@ -1019,8 +1020,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001508
-      electron-to-chromium: 1.4.441
+      caniuse-lite: 1.0.30001509
+      electron-to-chromium: 1.4.442
       node-releases: 2.0.12
       update-browserslist-db: 1.0.11(browserslist@4.21.9)
     dev: true
@@ -1049,8 +1050,8 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /caniuse-lite@1.0.30001508:
-    resolution: {integrity: sha512-sdQZOJdmt3GJs1UMNpCCCyeuS2IEGLXnHyAo9yIO5JJDjbjoVRij4M1qep6P6gFpptD1PqIYgzM+gwJbOi92mw==}
+  /caniuse-lite@1.0.30001509:
+    resolution: {integrity: sha512-2uDDk+TRiTX5hMcUYT/7CSyzMZxjfGu0vAUjS2g0LSD8UoXOv0LtpH4LxGMemsiPq6LCVIUjNwVM0erkOkGCDA==}
     dev: true
 
   /chai@4.3.7:
@@ -1194,8 +1195,9 @@ packages:
       proto-list: 1.2.4
     dev: true
 
-  /consola@3.2.1:
-    resolution: {integrity: sha512-p4cjcr/NHr2pbmXcTBcdNwIWEyQIzavKkZt6d0rDPQXta+oilM9j9Folao2REulksBZhYX39vF+HlIm7QRTeWA==}
+  /consola@3.2.2:
+    resolution: {integrity: sha512-r921u0vbF4lQsoIqYvSSER+yZLPQGijOHrYcWoCNVNBZmn/bRR+xT/DgerTze/nLD9TTGzdDa378TVhx7RDOYg==}
+    engines: {node: ^14.18.0 || >=16.10.0}
     dev: true
 
   /conventional-changelog-angular@5.0.13:
@@ -1475,8 +1477,8 @@ packages:
       sigmund: 1.0.1
     dev: true
 
-  /electron-to-chromium@1.4.441:
-    resolution: {integrity: sha512-LlCgQ8zgYZPymf5H4aE9itwiIWH4YlCiv1HFLmmcBeFYi5E+3eaIFnjHzYtcFQbaKfAW+CqZ9pgxo33DZuoqPg==}
+  /electron-to-chromium@1.4.442:
+    resolution: {integrity: sha512-RkrZF//Ya+0aJq2NM3OdisNh5ZodZq1rdXOS96G8DdDgpDKqKE81yTbbQ3F/4CKm1JBPsGu1Lp/akkna2xO06Q==}
     dev: true
 
   /emoji-regex@8.0.0:
@@ -3143,7 +3145,7 @@ packages:
       '@rollup/plugin-replace': 5.0.2(rollup@3.25.3)
       '@rollup/pluginutils': 5.0.2(rollup@3.25.3)
       chalk: 5.2.0
-      consola: 3.2.1
+      consola: 3.2.2
       defu: 6.1.2
       esbuild: 0.17.19
       globby: 13.2.0
@@ -3346,7 +3348,7 @@ packages:
     resolution: {integrity: sha512-iGdlqtajmiqed8ptURKPJ/Olz0/mwripVZszg6tygfZSIL9kYFPJTNY6+Q6OjWGznl2L06vxG5HvNvAnWrnzbg==}
     dev: true
 
-  /vue-demi@0.14.5(vue@3.3.4):
+  /vue-demi@0.14.5(@vue/composition-api@1.4.0)(vue@3.3.4):
     resolution: {integrity: sha512-o9NUVpl/YlsGJ7t+xuqJKx8EBGf1quRhCiT6D/J0pfwmk9zUwYkC7yrF4SZCe6fETvSM3UNL2edcbYrSyc4QHA==}
     engines: {node: '>=12'}
     hasBin: true
@@ -3358,6 +3360,7 @@ packages:
       '@vue/composition-api':
         optional: true
     dependencies:
+      '@vue/composition-api': 1.4.0(vue@3.3.4)
       vue: 3.3.4
 
   /vue-router@4.2.2(vue@3.3.4):

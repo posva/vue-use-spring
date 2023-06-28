@@ -23,6 +23,10 @@ export default defineBuildConfig({
         // file: 'index.iife.js',
         dir: './dist',
         format: 'iife',
+        globals: {
+          'vue-demi': 'VueDemi',
+          vue: 'Vue',
+        },
         exports: 'auto',
         freeze: false,
         externalLiveBindings: false,
