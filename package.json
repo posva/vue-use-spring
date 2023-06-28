@@ -33,7 +33,8 @@
     "test": "pnpm run test:types && pnpm run test:unit run && pnpm run build"
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
   "keywords": [
     "vue",
