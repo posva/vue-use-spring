@@ -13,6 +13,9 @@ dependencies:
     version: 0.14.5(@vue/composition-api@1.4.0)(vue@3.3.4)
 
 devDependencies:
+  '@posva/prompts':
+    specifier: ^2.4.4
+    version: 2.4.4
   '@types/lodash-es':
     specifier: ^4.17.7
     version: 4.17.7
@@ -37,15 +40,12 @@ devDependencies:
   conventional-changelog-cli:
     specifier: ^2.2.2
     version: 2.2.2
-  enquirer:
-    specifier: ^2.3.6
-    version: 2.3.6
   execa:
     specifier: ^7.1.1
     version: 7.1.1
   lint-staged:
     specifier: ^13.2.3
-    version: 13.2.3(enquirer@2.3.6)
+    version: 13.2.3
   lodash-es:
     specifier: ^4.17.21
     version: 4.17.21
@@ -555,6 +555,14 @@ packages:
       fastq: 1.15.0
     dev: true
 
+  /@posva/prompts@2.4.4:
+    resolution: {integrity: sha512-8aPwklhbSV2VN/NQMBNFkuo8+hlJVdcFRXp4NCIfdcahh3qNEcaSoD8qXjru0OlN1sONJ7le7p6+YUbALaG6Mg==}
+    engines: {node: '>= 14'}
+    dependencies:
+      kleur: 4.1.5
+      sisteransi: 1.0.5
+    dev: true
+
   /@rollup/plugin-alias@5.0.0(rollup@3.25.3):
     resolution: {integrity: sha512-l9hY5chSCjuFRPsnRm16twWBiSApl2uYFLsepQYwtBuAxNMQ/1dJqADld40P0Jkqm65GRTLy/AC6hnpVebtLsA==}
     engines: {node: '>=14.0.0'}
@@ -925,11 +933,6 @@ packages:
     dependencies:
       clean-stack: 2.2.0
       indent-string: 4.0.0
-    dev: true
-
-  /ansi-colors@4.1.3:
-    resolution: {integrity: sha512-/6w/C21Pm1A7aZitlI5Ni/2J6FFQN8i1Cvz3kHABAAbw93v/NlvKdVOqz7CCWz/3iv/JplRSEEZ83XION15ovw==}
-    engines: {node: '>=6'}
     dev: true
 
   /ansi-escapes@4.3.2:
@@ -1492,13 +1495,6 @@ packages:
     resolution: {integrity: sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg==}
     dev: true
 
-  /enquirer@2.3.6:
-    resolution: {integrity: sha512-yjNnPr315/FjS4zIsUxYguYUPP2e1NK4d7E7ZOLiyYCcbFBiTMyID+2wvm2w6+pZ/odMA7cRkjhsPbltwBOrLg==}
-    engines: {node: '>=8.6'}
-    dependencies:
-      ansi-colors: 4.1.3
-    dev: true
-
   /error-ex@1.3.2:
     resolution: {integrity: sha512-7dFHNmqeFSEt2ZBsCriorKnn3Z2pj+fd9kmI6QoWw4//DL+icEBfc0U7qJCisqrTsKTjw4fNFy2pW9OqStD84g==}
     dependencies:
@@ -2052,6 +2048,11 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
+  /kleur@4.1.5:
+    resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}
+    engines: {node: '>=6'}
+    dev: true
+
   /lilconfig@2.1.0:
     resolution: {integrity: sha512-utWOt/GHzuUxnLKxB6dk81RoOeoNeHgbrXiuGk4yyF5qlRz+iIVWu56E2fqGHFrXz0QNUhLB/8nKqvRH66JKGQ==}
     engines: {node: '>=10'}
@@ -2061,7 +2062,7 @@ packages:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
     dev: true
 
-  /lint-staged@13.2.3(enquirer@2.3.6):
+  /lint-staged@13.2.3:
     resolution: {integrity: sha512-zVVEXLuQIhr1Y7R7YAWx4TZLdvuzk7DnmrsTNL0fax6Z3jrpFcas+vKbzxhhvp6TA55m1SQuWkpzI1qbfDZbAg==}
     engines: {node: ^14.13.1 || >=16.0.0}
     hasBin: true
@@ -2072,7 +2073,7 @@ packages:
       debug: 4.3.4
       execa: 7.1.1
       lilconfig: 2.1.0
-      listr2: 5.0.8(enquirer@2.3.6)
+      listr2: 5.0.8
       micromatch: 4.0.5
       normalize-path: 3.0.0
       object-inspect: 1.12.3
@@ -2084,7 +2085,7 @@ packages:
       - supports-color
     dev: true
 
-  /listr2@5.0.8(enquirer@2.3.6):
+  /listr2@5.0.8:
     resolution: {integrity: sha512-mC73LitKHj9w6v30nLNGPetZIlfpUniNSsxxrbaPcWOjDb92SHPzJPi/t+v1YC/lxKz/AJ9egOjww0qUuFxBpA==}
     engines: {node: ^14.13.1 || >=16.0.0}
     peerDependencies:
@@ -2095,7 +2096,6 @@ packages:
     dependencies:
       cli-truncate: 2.1.0
       colorette: 2.0.20
-      enquirer: 2.3.6
       log-update: 4.0.0
       p-map: 4.0.0
       rfdc: 1.3.0
@@ -2846,6 +2846,10 @@ packages:
 
   /signal-exit@3.0.7:
     resolution: {integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==}
+    dev: true
+
+  /sisteransi@1.0.5:
+    resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
     dev: true
 
   /slash@4.0.0:

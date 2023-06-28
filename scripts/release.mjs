@@ -5,12 +5,9 @@ import { join, resolve, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import chalk from 'chalk'
 import semver from 'semver'
-// CommonJS module
-import enquirer from 'enquirer'
+import prompts from '@posva/prompts'
 import { execa } from 'execa'
 import pSeries from 'p-series'
-
-const { prompt } = enquirer
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
@@ -101,11 +98,15 @@ async function main() {
   }
 
   // NOTE: I'm unsure if this would mess up the changelog
-  // const { pickedPackages } = await prompt({
+  // const { pickedPackages } = await prompts({
   //   type: 'multiselect',
   //   name: 'pickedPackages',
-  //   messages: 'What packages do you want to release?',
-  //   choices: changedPackages.map((pkg) => pkg.name),
+  //   message: 'What packages do you want to release?',
+  //   choices: changedPackages.map((pkg) => ({
+  //     title: pkg.name,
+  //     value: pkg.name,
+  //   })),
+  //   hint: '- Space to select. Return to submit',
   // })
 
   const packagesToRelease = changedPackages
@@ -126,46 +127,64 @@ async function main() {
       const prerelease = semver.prerelease(version)
       const preId = prerelease && prerelease[0]
 
+      /** @type {Array<'patch' | 'minor' | 'major' | 'prepatch' | 'preminor' | 'premajor' | 'prerelease'>} */
       const versionIncrements = [
         'patch',
         'minor',
         'major',
+        // @ts-expect-error: too annoying to type in jsdoc
         ...(preId ? ['prepatch', 'preminor', 'premajor', 'prerelease'] : []),
       ]
 
-      const { release } = await prompt({
+      const { release } = await prompts({
         type: 'select',
         name: 'release',
         message: `Select release type for ${chalk.bold.white(name)}`,
+        validate: (v) => (typeof v === 'string' ? true : 'This is mandatory'),
         choices: versionIncrements
-          .map((i) => `${i}: ${name} (${semver.inc(version, i, preId)})`)
-          .concat(['custom']),
+          .map((i) => {
+            const newVersion = semver.inc(version, i, preId)
+            return {
+              title: `${i}: ${name} (${newVersion})`,
+              value: newVersion,
+              // `${i}: ${name} (${semver.inc(version, i, preId)})`
+            }
+          })
+          .concat([
+            {
+              title: 'Custom',
+              value: 'custom',
+            },
+          ]),
       })
+
+      if (release == null) {
+        process.exit(0)
+      }
 
       if (release === 'custom') {
         version = (
-          await prompt({
-            type: 'input',
+          await prompts({
+            type: 'text',
             name: 'version',
             message: `Input custom version (${chalk.bold.white(name)})`,
             initial: version,
+            validate: (v) => {
+              return semver.valid(v) ? true : 'Invalid semver version'
+            },
           })
         ).version
       } else {
-        version = release.match(/\((.*)\)/)[1]
-      }
-
-      if (!semver.valid(version)) {
-        throw new Error(`invalid target version: ${version}`)
+        version = release
       }
 
       return { name, path, version, pkg }
     })
   )
 
-  const { yes: isReleaseConfirmed } = await prompt({
+  const { isReleaseConfirmed } = await prompts({
     type: 'confirm',
-    name: 'yes',
+    name: 'isReleaseConfirmed',
     message: `Releasing \n${pkgWithVersions
       .map(
         ({ name, version }) =>
@@ -190,9 +209,9 @@ async function main() {
     })
   }
 
-  const { yes: isChangelogCorrect } = await prompt({
+  const { isChangelogCorrect } = await prompts({
     type: 'confirm',
-    name: 'yes',
+    name: 'isChangelogCorrect',
     message: 'Are the changelogs correct?',
   })
 
