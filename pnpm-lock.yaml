@@ -62,8 +62,8 @@ devDependencies:
     specifier: ^7.5.3
     version: 7.5.3
   typescript:
-    specifier: ^4.8.4
-    version: 4.8.4
+    specifier: ^5.1.5
+    version: 5.1.5
   unbuild:
     specifier: ^1.2.1
     version: 1.2.1
@@ -3136,12 +3136,6 @@ packages:
   /type-fest@0.8.1:
     resolution: {integrity: sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==}
     engines: {node: '>=8'}
-    dev: true
-
-  /typescript@4.8.4:
-    resolution: {integrity: sha512-QCh+85mCy+h0IGff8r5XWzOVSbBO+KfeYrMQh7NJ58QujwcE22u+NUSmUxqF+un70P9GXKxa2HCNiTTMJknyjQ==}
-    engines: {node: '>=4.2.0'}
-    hasBin: true
     dev: true
 
   /typescript@5.1.5:
