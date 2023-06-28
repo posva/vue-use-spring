@@ -26,7 +26,7 @@ let {
 // const preId =
 //   args.preid ||
 //   (semver.prerelease(currentVersion) && semver.prerelease(currentVersion)[0])
-const EXPECTED_BRANCH = 'v1'
+const EXPECTED_BRANCH = 'main'
 // for multi packages
 const MAIN_PACKAGE = 'vue-use-spring'
 
