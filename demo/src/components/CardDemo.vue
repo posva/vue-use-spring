@@ -15,7 +15,7 @@ const springConfig = {
 }
 
 const transform = useSpring(
-  ref({ x: 0, y: 0, z: 0, scale: 1, color: 0 }),
+  { x: 0, y: 0, z: 0, scale: 1, color: 0 },
   springConfig,
   {
     onRest() {

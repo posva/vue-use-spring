@@ -36,9 +36,6 @@ jobs:
       - name: Types
         run: nr test:types
 
-      - name: Bundle Types
-        run: nr build:dts
-
       # Not implemented yet
       # - name: Test
       #   run: nr test:unit
