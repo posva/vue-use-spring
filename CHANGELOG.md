@@ -1,3 +1,7 @@
+# [0.2.0](https://github.com/posva/vue-use-spring/compare/v0.1.1...v0.2.0) (2023-06-28)
+
+feat: allow ref and getters as arguments
+
 ## [0.1.1](https://github.com/posva/vue-use-spring/compare/v0.1.0...v0.1.1) (2021-07-26)
 
 Fix build to externalize vue-demi
