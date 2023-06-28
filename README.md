@@ -32,9 +32,3 @@ position.x = 100
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
-
-<div align="right">
-<sub><em>
-This project was created using the <a href="https://github.com/posva/vue-ts-lib-boilerplate" rel="nofollow">Vue Library boilerplate</a> by <a href="https://github.com/posva" rel="nofollow">posva</a>
-</em></sub>
-</div>
