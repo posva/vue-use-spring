@@ -122,10 +122,14 @@ async function main() {
 
   const pkgWithVersions = await pSeries(
     packagesToRelease.map(({ name, path, pkg }) => async () => {
+      if (!pkg.version) {
+        throw new Error('No version found in package.json')
+      }
+
       let { version } = pkg
 
       const prerelease = semver.prerelease(version)
-      const preId = prerelease && prerelease[0]
+      const preId = prerelease?.[0] != null
 
       /** @type {Array<'patch' | 'minor' | 'major' | 'prepatch' | 'preminor' | 'premajor' | 'prerelease'>} */
       const versionIncrements = [
@@ -336,7 +340,7 @@ async function publishPackage(pkg) {
 /**
  * Get the packages that have changed. Based on `lerna changed` but without lerna.
  *
- * @returns {Promise<{ name: string; path: string; pkg: any; version: string }[]>}
+ * @returns {Promise<{ name: string; path: string; pkg: import('pkg-types').PackageJson; version: string }[]>}
  */
 async function getChangedPackages() {
   let lastTag
