@@ -5,9 +5,12 @@ import { join, resolve, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import chalk from 'chalk'
 import semver from 'semver'
-import { prompt } from 'enquirer'
+// CommonJS module
+import enquirer from 'enquirer'
 import { execa } from 'execa'
 import pSeries from 'p-series'
+
+const { prompt } = enquirer
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
