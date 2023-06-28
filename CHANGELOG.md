@@ -1,3 +1,7 @@
+## [0.2.1](https://github.com/posva/vue-use-spring/compare/v0.2.0...v0.2.1) (2023-06-28)
+
+This release contains no changes
+
 # [0.2.0](https://github.com/posva/vue-use-spring/compare/v0.1.1...v0.2.0) (2023-06-28)
 
 feat: allow ref and getters as arguments
