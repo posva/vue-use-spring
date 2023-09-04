@@ -10,18 +10,18 @@ dependencies:
     version: 1.4.0(vue@3.3.4)
   vue-demi:
     specifier: latest
-    version: 0.14.5(@vue/composition-api@1.4.0)(vue@3.3.4)
+    version: 0.14.6(@vue/composition-api@1.4.0)(vue@3.3.4)
 
 devDependencies:
   '@posva/prompts':
     specifier: ^2.4.4
     version: 2.4.4
   '@types/lodash-es':
-    specifier: ^4.17.8
-    version: 4.17.8
+    specifier: ^4.17.9
+    version: 4.17.9
   '@vitejs/plugin-vue':
-    specifier: ^4.3.3
-    version: 4.3.3(vite@4.4.9)(vue@3.3.4)
+    specifier: ^4.3.4
+    version: 4.3.4(vite@4.4.9)(vue@3.3.4)
   '@vitest/coverage-v8':
     specifier: ^0.34.3
     version: 0.34.3(vitest@0.34.3)
@@ -32,8 +32,8 @@ devDependencies:
     specifier: ^2.4.1
     version: 2.4.1(vue@3.3.4)
   '@vueuse/core':
-    specifier: ^10.4.0
-    version: 10.4.0(@vue/composition-api@1.4.0)(vue@3.3.4)
+    specifier: ^10.4.1
+    version: 10.4.1(@vue/composition-api@1.4.0)(vue@3.3.4)
   chalk:
     specifier: ^5.3.0
     version: 5.3.0
@@ -886,8 +886,8 @@ packages:
     resolution: {integrity: sha512-z/QT1XN4K4KYuslS23k62yDIDLwLFkzxOuMplDtObz0+y7VqJCaO2o+SPwHCvLFZh7xazvvoor2tA/hPz9ee7g==}
     dev: true
 
-  /@types/lodash-es@4.17.8:
-    resolution: {integrity: sha512-euY3XQcZmIzSy7YH5+Unb3b2X12Wtk54YWINBvvGQ5SmMvwb11JQskGsfkH/5HXK77Kr8GF0wkVDIxzAisWtog==}
+  /@types/lodash-es@4.17.9:
+    resolution: {integrity: sha512-ZTcmhiI3NNU7dEvWLZJkzG6ao49zOIjEgIE0RgV7wbPxU0f2xT3VSAHw2gmst8swH6V0YkLRGp4qPlX/6I90MQ==}
     dependencies:
       '@types/lodash': 4.14.195
     dev: true
@@ -916,8 +916,8 @@ packages:
     resolution: {integrity: sha512-4p9vcSmxAayx72yn70joFoL44c9MO/0+iVEBIQXe3v2h2SiAsEIo/G5v6ObFWvNKRFjbrVadNf9LqEEZeQPzdA==}
     dev: true
 
-  /@vitejs/plugin-vue@4.3.3(vite@4.4.9)(vue@3.3.4):
-    resolution: {integrity: sha512-ssxyhIAZqB0TrpUg6R0cBpCuMk9jTIlO1GNSKKQD6S8VjnXi6JXKfUXjSsxey9IwQiaRGsO1WnW9Rkl1L6AJVw==}
+  /@vitejs/plugin-vue@4.3.4(vite@4.4.9)(vue@3.3.4):
+    resolution: {integrity: sha512-ciXNIHKPriERBisHFBvnTbfKa6r9SAesOYXeGDzgegcvy9Q4xdScSHAmKbNT0M3O0S9LKhIf5/G+UYG4NnnzYw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       vite: ^4.0.0
@@ -1085,26 +1085,26 @@ packages:
       vue-component-type-helpers: 1.8.4
     dev: true
 
-  /@vueuse/core@10.4.0(@vue/composition-api@1.4.0)(vue@3.3.4):
-    resolution: {integrity: sha512-8JnnTwiuzUqfiYIW8H4FKG/g5ZMKSE+9auoFUwUAkzhqUjy24VbMkNlDBWetQCimiptx7RAO6u1IS55H6+p1Tg==}
+  /@vueuse/core@10.4.1(@vue/composition-api@1.4.0)(vue@3.3.4):
+    resolution: {integrity: sha512-DkHIfMIoSIBjMgRRvdIvxsyboRZQmImofLyOHADqiVbQVilP8VVHDhBX2ZqoItOgu7dWa8oXiNnScOdPLhdEXg==}
     dependencies:
       '@types/web-bluetooth': 0.0.17
-      '@vueuse/metadata': 10.4.0
-      '@vueuse/shared': 10.4.0(@vue/composition-api@1.4.0)(vue@3.3.4)
-      vue-demi: 0.14.5(@vue/composition-api@1.4.0)(vue@3.3.4)
+      '@vueuse/metadata': 10.4.1
+      '@vueuse/shared': 10.4.1(@vue/composition-api@1.4.0)(vue@3.3.4)
+      vue-demi: 0.14.6(@vue/composition-api@1.4.0)(vue@3.3.4)
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
     dev: true
 
-  /@vueuse/metadata@10.4.0:
-    resolution: {integrity: sha512-JNf9IR7ZBTDxWPfQlHhqBOv1VLO6ReTZi9HGY7RABjYHVpaEpjlHU7HpZDVOJGDa0gKITAbA2zMkNSBjKMcdaw==}
+  /@vueuse/metadata@10.4.1:
+    resolution: {integrity: sha512-2Sc8X+iVzeuMGHr6O2j4gv/zxvQGGOYETYXEc41h0iZXIRnRbJZGmY/QP8dvzqUelf8vg0p/yEA5VpCEu+WpZg==}
     dev: true
 
-  /@vueuse/shared@10.4.0(@vue/composition-api@1.4.0)(vue@3.3.4):
-    resolution: {integrity: sha512-52asvLf5cbAS/h6xWjqoY4MgjxmFjnVNf/nA8BP7RbeIrIGcf+BZbeOcVo+92byqArXEJiBxptXpufQvbwJL/w==}
+  /@vueuse/shared@10.4.1(@vue/composition-api@1.4.0)(vue@3.3.4):
+    resolution: {integrity: sha512-vz5hbAM4qA0lDKmcr2y3pPdU+2EVw/yzfRsBdu+6+USGa4PxqSQRYIUC9/NcT06y+ZgaTsyURw2I9qOFaaXHAg==}
     dependencies:
-      vue-demi: 0.14.5(@vue/composition-api@1.4.0)(vue@3.3.4)
+      vue-demi: 0.14.6(@vue/composition-api@1.4.0)(vue@3.3.4)
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
@@ -3537,8 +3537,8 @@ packages:
     resolution: {integrity: sha512-6bnLkn8O0JJyiFSIF0EfCogzeqNXpnjJ0vW/SZzNHfe6sPx30lTtTXlE5TFs2qhJlAtDFybStVNpL73cPe3OMQ==}
     dev: true
 
-  /vue-demi@0.14.5(@vue/composition-api@1.4.0)(vue@3.3.4):
-    resolution: {integrity: sha512-o9NUVpl/YlsGJ7t+xuqJKx8EBGf1quRhCiT6D/J0pfwmk9zUwYkC7yrF4SZCe6fETvSM3UNL2edcbYrSyc4QHA==}
+  /vue-demi@0.14.6(@vue/composition-api@1.4.0)(vue@3.3.4):
+    resolution: {integrity: sha512-8QA7wrYSHKaYgUxDA5ZC24w+eHm3sYCbp0EzcDwKqN3p6HqtTCGR/GVsPyZW92unff4UlcSh++lmqDWN3ZIq4w==}
     engines: {node: '>=12'}
     hasBin: true
     requiresBuild: true
