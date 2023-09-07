@@ -1,3 +1,9 @@
+# [0.3.0](https://github.com/posva/vue-use-spring/compare/v0.2.1...v0.3.0) (2023-09-07)
+
+### Bug Fixes
+
+- **types:** package.json types ([bc7a3a2](https://github.com/posva/vue-use-spring/commit/bc7a3a2381707df2c4e2db86a4efcc35babca0de))
+
 ## [0.2.1](https://github.com/posva/vue-use-spring/compare/v0.2.0...v0.2.1) (2023-06-28)
 
 This release contains no changes

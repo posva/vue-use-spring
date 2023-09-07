@@ -1,7 +1,7 @@
 {
   "name": "vue-use-spring",
   "type": "module",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "packageManager": "pnpm@8.7.1",
   "description": "Natural animations with springs",
   "main": "./dist/index.mjs",
