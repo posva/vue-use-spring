@@ -66,8 +66,6 @@ export function useSpring<T extends MaybeRefOrGetter<SpringValue>>(
     onRest?: () => any
   } = {}
 ): UnwrapRef<T> {
-  const spring = springConfiguration || noWobble
-
   const onRest = options.onRest || noop
 
   // hold a ref to real values so we can change them
@@ -173,7 +171,7 @@ export function useSpring<T extends MaybeRefOrGetter<SpringValue>>(
       animateValues(
         framesToCatchUp,
         currentFrameCompletion,
-        toValue(spring),
+        toValue(springConfiguration),
         toValue(realValues),
         currentValues.value,
         currentVelocities.value,
