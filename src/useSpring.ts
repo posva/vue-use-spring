@@ -1,7 +1,5 @@
 import {
   computed,
-  onMounted,
-  onUnmounted,
   reactive,
   ref,
   watch,
@@ -10,6 +8,7 @@ import {
   Ref,
   isRef,
   UnwrapRef,
+  onScopeDispose,
 } from 'vue-demi'
 import { SpringConfig, noWobble } from './presets'
 import { raf, cancelRaf, now, isArray, stepper } from './utils'
@@ -98,7 +97,8 @@ export function useSpring<T extends MaybeRefOrGetter<SpringValue>>(
   let idealValues = current[0]
   let idealVelocities = current[1]
 
-  onMounted(() => {
+  // only run this code on client
+  if (typeof window === 'undefined') {
     prevTime = now()
     accumulatedTime = 0
 
@@ -111,11 +111,11 @@ export function useSpring<T extends MaybeRefOrGetter<SpringValue>>(
     idealVelocities = ideal[1]
 
     animate()
-  })
+  }
 
   let animationId: number | void | undefined | null
   // TODO: also cancel when a new value comes
-  onUnmounted(() => {
+  onScopeDispose(() => {
     if (animationId) {
       cancelRaf(animationId)
     }
