@@ -1,3 +1,9 @@
+## [0.3.1](https://github.com/posva/vue-use-spring/compare/v0.3.0...v0.3.1) (2023-10-27)
+
+### Bug Fixes
+
+- ssr compat ([9240573](https://github.com/posva/vue-use-spring/commit/92405735cfe844bc5714571121aa1e8947427a0c))
+
 # [0.3.0](https://github.com/posva/vue-use-spring/compare/v0.2.1...v0.3.0) (2023-09-07)
 
 ### Bug Fixes
