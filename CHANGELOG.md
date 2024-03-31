@@ -1,3 +1,9 @@
+## [0.3.3](https://github.com/posva/vue-use-spring/compare/v0.3.2...v0.3.3) (2024-03-31)
+
+### Bug Fixes
+
+- var declaration ([2335afe](https://github.com/posva/vue-use-spring/commit/2335afea72fb8aa58fd978397c7e09865c2a1e87))
+
 ## [0.3.2](https://github.com/posva/vue-use-spring/compare/v0.3.1...v0.3.2) (2024-03-31)
 
 ### Bug Fixes
