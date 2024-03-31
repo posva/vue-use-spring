@@ -75,6 +75,7 @@ export function useSpring<T extends MaybeRefOrGetter<SpringValue>>(
   let wasAnimating = false
   let prevTime = 0
   let accumulatedTime = 0
+  let animationId: number | void | undefined | null
 
   watch(
     realValues,
@@ -113,7 +114,6 @@ export function useSpring<T extends MaybeRefOrGetter<SpringValue>>(
     animate()
   }
 
-  let animationId: number | void | undefined | null
   // TODO: also cancel when a new value comes
   onScopeDispose(() => {
     if (animationId) {
@@ -155,7 +155,7 @@ export function useSpring<T extends MaybeRefOrGetter<SpringValue>>(
       }
 
       if (accumulatedTime === 0) {
-        // no need to cancel animationID here; shouldn't have any in flight
+        // no need to cancel animationId here; shouldn't have any in flight
         animationId = null
         // TODO: emit
         // this.$emit('motion-restart')
