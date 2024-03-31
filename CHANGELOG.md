@@ -1,3 +1,9 @@
+## [0.3.2](https://github.com/posva/vue-use-spring/compare/v0.3.1...v0.3.2) (2024-03-31)
+
+### Bug Fixes
+
+- **ssr:** run animate on client only ([d76b02c](https://github.com/posva/vue-use-spring/commit/d76b02c1c5f9c2faa60bd7729c89b59eea3fdaa4)), closes [#328](https://github.com/posva/vue-use-spring/issues/328)
+
 ## [0.3.1](https://github.com/posva/vue-use-spring/compare/v0.3.0...v0.3.1) (2023-10-27)
 
 ### Bug Fixes
