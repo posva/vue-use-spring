@@ -1,8 +1,5 @@
 {
-  "include": [
-    "src/global.d.ts",
-    "src/**/*.ts"
-  ],
+  "include": ["src/global.d.ts", "src/**/*.ts"],
   "compilerOptions": {
     "baseUrl": ".",
     "rootDir": ".",
@@ -11,10 +8,11 @@
     "noEmit": true,
     "target": "esnext",
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "Bundler",
     "allowJs": false,
     "noUnusedLocals": true,
     "strictNullChecks": true,
+    "skipLibCheck": true,
     "noImplicitAny": true,
     "noImplicitThis": true,
     "noImplicitReturns": true,
@@ -25,12 +23,6 @@
     "esModuleInterop": true,
     "removeComments": false,
     "jsx": "preserve",
-    "lib": [
-      "esnext",
-      "dom"
-    ],
-    "types": [
-      "node"
-    ]
+    "lib": ["esnext", "dom"]
   }
 }

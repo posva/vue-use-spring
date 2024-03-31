@@ -6,4 +6,9 @@ export default defineConfig({
     exclude: ['vue-demi'],
   },
   plugins: [vue()],
+  test: {
+    coverage: {
+      include: ['src'],
+    },
+  },
 })
