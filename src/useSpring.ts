@@ -11,7 +11,7 @@ import {
   onScopeDispose,
 } from 'vue-demi'
 import { SpringConfig, noWobble } from './presets'
-import { raf, cancelRaf, now, isArray, stepper } from './utils'
+import { raf, cancelRaf, now, isArray, stepper, isClient } from './utils'
 
 const msPerFrame = 1000 / 60
 
@@ -97,8 +97,8 @@ export function useSpring<T extends MaybeRefOrGetter<SpringValue>>(
   let idealValues = current[0]
   let idealVelocities = current[1]
 
-  // only run this code on client
-  if (typeof window === 'undefined') {
+  // No need to compute or animate if we're not in the client
+  if (isClient) {
     prevTime = now()
     accumulatedTime = 0
 
