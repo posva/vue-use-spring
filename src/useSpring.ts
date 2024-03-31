@@ -97,6 +97,8 @@ export function useSpring<T extends MaybeRefOrGetter<SpringValue>>(
   let idealValues = current[0]
   let idealVelocities = current[1]
 
+  let animationId: number | void | undefined | null
+
   // only run this code on client
   if (typeof window === 'undefined') {
     prevTime = now()
@@ -111,15 +113,14 @@ export function useSpring<T extends MaybeRefOrGetter<SpringValue>>(
     idealVelocities = ideal[1]
 
     animate()
-  }
 
-  let animationId: number | void | undefined | null
-  // TODO: also cancel when a new value comes
-  onScopeDispose(() => {
-    if (animationId) {
-      cancelRaf(animationId)
-    }
-  })
+    // TODO: also cancel when a new value comes
+    onScopeDispose(() => {
+      if (animationId) {
+        cancelRaf(animationId)
+      }
+    })
+  }
 
   function animate() {
     animationId = raf(() => {
