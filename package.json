@@ -60,7 +60,7 @@
     "lodash-es": "^4.17.21",
     "minimist": "^1.2.8",
     "p-series": "^3.0.0",
-    "prettier": "^2.8.8",
+    "prettier": "^3.5.3",
     "semver": "^7.7.1",
     "simple-git-hooks": "^2.12.1",
     "typescript": "^5.8.2",
