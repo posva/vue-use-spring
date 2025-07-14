@@ -2,7 +2,7 @@
   "name": "vue-use-spring",
   "type": "module",
   "version": "0.3.3",
-  "packageManager": "pnpm@10.12.4",
+  "packageManager": "pnpm@10.13.1",
   "description": "Natural animations with springs",
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
@@ -65,7 +65,7 @@
     "simple-git-hooks": "^2.13.0",
     "typescript": "^5.8.3",
     "unbuild": "^3.5.0",
-    "vite": "^7.0.2",
+    "vite": "^7.0.4",
     "vitest": "^3.2.4",
     "vue": "^3.5.17",
     "vue-router": "^4.5.1"
