@@ -18,7 +18,7 @@ import {
   defineComponent,
   watch,
   toRaw,
-} from 'vue-demi'
+} from 'vue'
 import { SpringConfig } from './presets'
 import { useSpring } from './useSpring'
 

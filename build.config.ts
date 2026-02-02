@@ -24,7 +24,6 @@ export default defineBuildConfig({
         dir: './dist',
         format: 'iife',
         globals: {
-          'vue-demi': 'VueDemi',
           vue: 'Vue',
         },
         exports: 'auto',

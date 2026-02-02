@@ -88,13 +88,7 @@
     }
   ],
   "peerDependencies": {
-    "@vue/composition-api": "^1.4.0",
-    "vue": "^2.6.12 || ^3.0.0"
-  },
-  "peerDependenciesMeta": {
-    "@vue/composition-api": {
-      "optional": true
-    }
+    "vue": "^3.0.0"
   },
   "repository": {
     "type": "git",
@@ -103,8 +97,5 @@
   "bugs": {
     "url": "https://github.com/posva/vue-use-spring/issues"
   },
-  "homepage": "https://github.com/posva/vue-use-spring#readme",
-  "dependencies": {
-    "vue-demi": "latest"
-  }
+  "homepage": "https://github.com/posva/vue-use-spring#readme"
 }

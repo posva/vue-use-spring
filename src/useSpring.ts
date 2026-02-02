@@ -9,7 +9,7 @@ import {
   isRef,
   UnwrapRef,
   onScopeDispose,
-} from 'vue-demi'
+} from 'vue'
 import { SpringConfig, noWobble } from './presets'
 import { raf, cancelRaf, now, isArray, stepper, isClient } from './utils'
 
