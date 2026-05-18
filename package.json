@@ -48,15 +48,15 @@
   "devDependencies": {
     "@posva/prompts": "^2.4.4",
     "@types/lodash-es": "^4.17.12",
-    "@vitejs/plugin-vue": "^6.0.6",
-    "@vitest/coverage-v8": "^4.1.5",
+    "@vitejs/plugin-vue": "^6.0.7",
+    "@vitest/coverage-v8": "^4.1.6",
     "@vue/compiler-sfc": "^3.5.34",
     "@vue/test-utils": "^2.4.10",
     "@vueuse/core": "^14.3.0",
     "chalk": "^5.6.2",
     "conventional-changelog-cli": "^5.0.0",
     "execa": "^9.6.1",
-    "lint-staged": "^17.0.4",
+    "lint-staged": "^17.0.5",
     "lodash-es": "^4.18.1",
     "minimist": "^1.2.8",
     "p-series": "^3.0.0",
@@ -65,10 +65,10 @@
     "simple-git-hooks": "^2.13.1",
     "typescript": "^5.9.3",
     "unbuild": "^3.6.1",
-    "vite": "^8.0.11",
-    "vitest": "^4.1.5",
+    "vite": "^8.0.13",
+    "vitest": "^4.1.6",
     "vue": "^3.5.34",
-    "vue-router": "^5.0.6"
+    "vue-router": "^5.0.7"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged",
