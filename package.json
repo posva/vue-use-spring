@@ -63,7 +63,7 @@
     "prettier": "^2.8.8",
     "semver": "^7.8.5",
     "simple-git-hooks": "^2.13.1",
-    "typescript": "^5.9.3",
+    "typescript": "^6.0.3",
     "unbuild": "^3.6.1",
     "vite": "^8.1.0",
     "vitest": "^4.1.9",
