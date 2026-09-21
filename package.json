@@ -52,7 +52,7 @@
     "@vitest/coverage-v8": "^5.0.1",
     "@vue/compiler-sfc": "^3.5.43",
     "@vue/test-utils": "^2.5.1",
-    "@vueuse/core": "^14.4.0",
+    "@vueuse/core": "^15.0.0",
     "chalk": "^6.0.0",
     "conventional-changelog-cli": "^5.0.0",
     "execa": "^10.0.1",
